@@ -1,0 +1,114 @@
+/* QUANTIFIED SELFIE VERSION OF 2016 Tyler J. Fisher and Northwestern University Knight Lab's SOUNDCITE 
+ */
+
+/*PLAYER CHROME*/
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); opacity: 0.4; }
+    50%  { -webkit-transform: rotate(180deg); opacity: 1; }
+    to   { -webkit-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); opacity: 0.4; }
+    50%  { -moz-transform: rotate(180deg); opacity: 1; }
+    to   { -moz-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); opacity: 0.4; }
+    50%  { -ms-transform: rotate(180deg); opacity: 1; }
+    to   { -ms-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-o-keyframes spin {
+    from { -o-transform: rotate(0deg); opacity: 0.4; }
+    50%  { -o-transform: rotate(180deg); opacity: 1; }
+    to   { -o-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); opacity: 0.2; }
+    50%  { transform: rotate(180deg); opacity: 1; }
+    to   { transform: rotate(360deg); opacity: 0.2; }
+}
+
+.soundcite-loaded {
+    border-radius: 6px;
+    padding: 0 5px 0 5px;
+    display: inline-block;
+    cursor: pointer;
+    background: rgba(0,0,0,.1);
+}
+
+.soundcite-loaded:before {
+    display: inline-block;
+    content: "";
+    vertical-align: -10%;
+    margin-right: 0.25em;
+}
+
+.soundcite-loading:before {
+    margin-right: 0.5em;
+    font-size: 0.9em;
+    position: relative;
+    top: -.05em;
+    height: 0.75em;    
+    width: 0.75em;
+    border: 2px solid #000;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    -ms-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+
+
+.soundcite {
+    
+    border-radius: 6px;
+    padding: 3px 5px;
+    display: inline;
+    cursor: pointer;
+    background: rgba(59, 59, 59, 0.15);
+    z-index: 10;
+
+    -webkit-transform: translateZ(0);
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+
+    margin-bottom: 1em;
+    color: #414141;
+}
+
+.soundcite:before {
+    display: inline-block;
+    content: "";
+    vertical-align: -10%;
+    margin-right: 0.25em;
+}
+
+.soundcite-play:before {
+    font-size: 0.9em;
+    position: relative;
+    top: -.05em;
+    border: 0.5em solid transparent;
+    border-left: 0.75em solid #B84AB6;
+}
+
+.soundcite-pause:before {
+    font-size: 0.9em;
+    position: relative;
+    margin-top: .05em;
+    height: 1em;
+    border-left: .75em double #B84AB6;
+    border-right: .5em solid transparent;
+}
+
+
+/*.soundcite-duration{
+    display:none;
+}*/
